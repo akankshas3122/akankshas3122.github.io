@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="slideshow.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 95vh;
+    }
+
+
+    .topnav {
+      position: fixed;
+      overflow: hidden;
+      background-color: #333;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 40px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #80bfff;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="topnav">
+      <a class="active" href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#discography">DISCOGRAPHY</a>
+      <a href="#media">MEDIA</a>
+      <a href="#store">STORE</a>
+      <a href="#tour">TOUR</a>
+    </div>
+  </header>
+
+  <!-- <div class="centered">Nirvana</div> -->
+  <section>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="nirvana1.jpeg" class="bg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="nirvana2.jpeg" class="bg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="nirvana3.jpeg" class="bg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="nirvana3.jpg" class="bg"/>
+        <h1>NIRVANA</h1>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="nirvana4.jpg" class="bg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="nirvana5.jpg" class="bg" />
+      </div>
+
+
+      <!-- Social Icons -->
+
+      <div class="socialIcon">
+        <h1>NIRVANA</h1>
+        <ul>
+          <li><a href="https://www.facebook.com/Nirvana/" target="_blank">
+              <img src="facebook.png" />
+            </a>
+          </li>
+          <li><a href="https://www.instagram.com/nirvana.official.band/" target="_blank">
+              <img src="instagram.png" />
+            </a>
+          </li>
+          <li><a href="https://twitter.com/Nirvana?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+              <img src="twitter.png" />
+            </a>
+          </li>
+          <li><a href="https://www.youtube.com/channel/UCFMZHIQMgBXTSxsr86Caazw" target="_blank">
+              <img src="youtube.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Social Icons -->
+
+    </div>
+  </section>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</body>
+
+</html>
