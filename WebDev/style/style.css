@@ -274,7 +274,7 @@ img.bg {
     }
 
     .about-page .container .inner-content .biography img{
-        width: 250px;
+        width: 100%;
         height: 250px;
         margin-right: 0px;
         float: none;
@@ -289,7 +289,7 @@ img.bg {
     }
 
     .about-page .container .inner-content .music-impact img{
-        width: 250px;
+        width: 100%;
         height: 250px;
         margin-left: 0;
         float: none;
@@ -317,5 +317,86 @@ img.bg {
     .about-page .container .inner-content .details .inner-details p{
         font-size: 25px;
     }
+    .media-page .inner-content{
+        padding: 15px !important;
+    }
+    .media-page .inner-content .photos h2,     .media-page .inner-content .videos h2{
+        margin-top: 15px !important;
+    }
+    .media-page .inner-content .photos .photos-album,     .media-page .inner-content .videos .video-album{
+        flex-direction: column;
+    }
+    .media-page .inner-content .photos .photos-album.res, .media-page .inner-content .videos .video-album.res{
+        margin-top: 0 !important;
+    }
+
+    .media-page .inner-content .photos .photos-album .photo-item,     .media-page .inner-content .videos .video-album .video-item{
+        margin-bottom: 20px;
+        margin-right: 0 !important;
+    }
+
+
 }
 /*media query for responsive*/
+
+/*media page*/
+
+.media-page .background{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #ccc;
+    /* position: absolute; */
+    /* overflow: auto; */
+    width: 100%;
+    height: 100%;
+}
+.media-page .container .inner-content{
+    border: 1px solid #000;
+    background:rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px 50px;
+}
+
+.media-page .container .inner-content .photos h2, .media-page .container .inner-content .videos h2{
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.media-page .container .inner-content .photos .photos-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.media-page .container .inner-content .photos .photos-album .photo-item{
+    flex: 1;
+    margin-right:30px; 
+}
+.media-page .container .inner-content .photos .photos-album .photo-item.last-image{
+    margin-right:0px; 
+}
+.media-page .container .inner-content .photos .photos-album .photo-item img{
+    width: 100%;
+}
+.media-page .container .inner-content .videos .video-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.media-page .container .inner-content .videos .video-album .video-item{
+    flex: 1;
+    margin-right:30px; 
+}
+.media-page .container .inner-content .videos .video-album .video-item.last-video{
+    margin-right:0px; 
+}
+.media-page .container .inner-content .videos .video-album .video-item img{
+    width: 100%;
+}
