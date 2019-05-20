@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nirvana media page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+     <!--navigation -->
+     <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discography.html">Discography</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media.html">Media</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="store.html">Store <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tour.html">Tour</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- navigation -->
+
+    <section class="store-page">
+        <main class="background"
+            style="background-image: url('images/about_nirvana_bg.jpeg');background-attachment: fixed;">
+            <article class="container">
+                <div class="inner-content">
+                    <div class="stores-data">
+                        <h2 class="title">STORE</h2>
+                        <ul class="stores-dates-title">
+                            <li class="active" onclick="allProducts()" id="allProduct">All Products</li>
+                            <li onclick="Topware()" id="topwareProduct">Topware</li>
+                            <li onclick="Stickers()" id="stickerProduct">Stickers</li>
+                            <li onclick="Hats()" id="hatProduct">Hats</li>
+                            <li>Posters</li>
+                            <li>CDs</li>
+                        </ul>
+                        <div class="product-store row">
+                            <div class="item col-4" id="all_Product_1">
+                                <img src="images/nirvana_store_image1.png" class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item col-4" id="all_Product_2">
+                                <img src="images/nirvana_store_image2.png"  class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-4" id="all_Product_3">
+                                <img src="images/nirvana_store_image3.png"  class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-4 pt-25" id="all_Product_4">
+                                <img src="images/nirvana_store_image4.png"  class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-4 pt-25" id="hat">
+                                <img src="images/nirvana_store_image5.png"  class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item col-4 pt-25" id="Sticker">
+                                <img src="images/nirvana_store_image6.png"  class="image"/>
+                                <div class="add-to-card">
+                                    <div class="add-btn">
+                                        <button type="button" onclick="addToCart()">+</button>
+                                        <p class="shop-now">Shop Now</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+    <script src="script/store.js"></script>
+</body>
+
+</html>
