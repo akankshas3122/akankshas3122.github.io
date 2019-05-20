@@ -7,7 +7,9 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
     height: 95vh;
 }
-
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+  }
 /*navigation*/
 
 .navbar{
@@ -15,17 +17,29 @@ body, html{
     color: #fff;
     padding: 0px;
 }
-ul.navbar-nav .nav-item .nav-link{
-    color: #fff;
-    font-size: 25px;
-    text-transform: uppercase;
-    padding: 15px 45px;
-    font-weight: 500;
+
+ul.navbar-nav .nav-item{
+    padding:0 35px;
+    background: transparent;
 }
+
+
+ ul.navbar-nav .nav-item .nav-link{
+    color: #fff;
+    font-size: 23px;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    font-weight: 500;
+} 
 
 ul.navbar-nav .nav-item .nav-link:hover{
     background-color: #8ad1ff;
 }
+ul.navbar-nav .nav-item .nav-link:focus{
+    outline: 0;
+    font-weight: normal;
+}
+
 
 .navbar-toggler{
     color: rgba(255,255,255,.5);
@@ -37,6 +51,9 @@ ul.navbar-nav .nav-item.active .nav-link{
 }
 li.active {
     background-color:green;
+}
+#navbarTogglerDemo01{
+background: #000000;
 }
 /*navigation*/
 
@@ -144,10 +161,8 @@ img.bg {
   }
 }
 
-
-/*about page*/
-
-.about-page .background{
+/*common for many pages*/
+.about-page .background, .media-page .background,.discography-page .background, .store-page .background{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -157,12 +172,18 @@ img.bg {
     width: 100%;
     height: 100%;
 }
-.about-page .container .inner-content{
+
+.about-page .container .inner-content, .media-page .container .inner-content,
+.discography-page .container .inner-content,.store-page .container .inner-content {
     border: 1px solid #000;
     background:rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 20px 50px;
 }
+/*common for many pages*/
+
+
+/*about page*/
 
 .about-page .container .inner-content .biography h2{
     font-size: 45px;
@@ -246,6 +267,172 @@ img.bg {
 
 
 
+
+
+
+
+/*media page*/
+
+
+
+
+.media-page .container .inner-content .photos h2, .media-page .container .inner-content .videos h2{
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.media-page .container .inner-content .photos .photos-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.media-page .container .inner-content .photos .photos-album .photo-item{
+    flex: 1;
+    margin-right:30px; 
+}
+.media-page .container .inner-content .photos .photos-album .photo-item.last-image{
+    margin-right:0px; 
+}
+.media-page .container .inner-content .photos .photos-album .photo-item img{
+    width: 316px;
+    transition: all .2s ease-in-out;
+    height: 316px;
+}
+.media-page .container .inner-content .photos .photos-album .photo-item img:hover{
+    transform: scale(1.1);
+}
+
+.media-page .container .inner-content .videos .video-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.media-page .container .inner-content .videos .video-album .video-item{
+    flex: 1;
+    margin-right:30px; 
+}
+.media-page .container .inner-content .videos .video-album .video-item.last-video{
+    margin-right:0px; 
+}
+.media-page .container .inner-content .videos .video-album .video-item img{
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+.media-page .container .inner-content .videos .video-album .video-item img:hover{
+    transform: scale(1.1);
+}
+
+
+.discography h2.title{
+
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.discography .inner-discography-content{
+    border: 1px solid rgba(225, 225, 225, 0.53);;
+    padding: 35px;
+    background: #000;
+    margin: 0  75px 45px 45px;
+}
+.discography .inner-discography-content .albums-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.discography .inner-discography-content .albums-images a{
+    flex: 1;
+    margin-right: 35px;
+}
+.discography .inner-discography-content .albums-images a:nth-child(3){
+    margin-right: 0px;
+}
+.discography .inner-discography-content .albums-images a img{
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+.discography .inner-discography-content .albums-images a img:hover{
+    transform: scale(1.1); 
+}
+
+
+.discography-nevermind h2.title{
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.discography-nevermind h2.title a{
+    color: #fff;
+    text-decoration: none;
+}
+.discography-nevermind h2.title a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.discography-nevermind h2.title a:focus{
+    border: 0;
+    outline: 0;
+}
+.discography-nevermind .inner-discography-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.discography-nevermind .image{
+    border: 1px solid rgba(225, 225, 225, 0.53);
+    padding: 35px;
+    background: #000;
+    margin: 15px 100px 0 35px;
+    flex: 1;
+}
+
+.discography-nevermind .image img{
+    width: 400px;
+    height: 400px;
+    transition: all .2s ease-in-out;
+}
+
+.discography-nevermind .image img:hover{
+    transform: scale(1.1);
+}
+
+
+.discography-nevermind .content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 10px;
+}
+.discography-nevermind .content .songs{
+    flex:1;
+}
+.discography-nevermind .content .songs ul, .discography-nevermind .content .durarion ul{
+    margin: 0;
+    padding-left: 25px;
+}
+
+.discography-nevermind .content .durarion{
+
+}
+
+.discography-nevermind .content .songs ul li, .discography-nevermind .content .durarion ul li{
+font-size: 30px;
+    line-height: 1;
+}
+
+.discography-nevermind .content .songs ul li span, .discography-nevermind .content .durarion ul li span{
+    font-size: 20px;
+}
 
 
 /*media query for responsive*/
@@ -339,64 +526,212 @@ img.bg {
 }
 /*media query for responsive*/
 
-/*media page*/
+/*Store page*/
+.store-page .container .inner-content{
+    padding:15px; 
 
-.media-page .background{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: #ccc;
-    /* position: absolute; */
-    /* overflow: auto; */
-    width: 100%;
-    height: 100%;
 }
-.media-page .container .inner-content{
-    border: 1px solid #000;
-    background:rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px 50px;
-}
-
-.media-page .container .inner-content .photos h2, .media-page .container .inner-content .videos h2{
+.store-page .container .inner-content .stores-data h2.title{
     font-size: 45px;
     text-transform: uppercase;
     margin-bottom: 25px;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 10px;    
 }
 
-.media-page .container .inner-content .photos .photos-album{
+
+.store-page .container .inner-content .stores-data ul.tour-dates-title{
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 1px solid #b3b1b1;
+    border-bottom: 1px solid #b3b1b1;
+    margin-bottom: 25px;
+    padding-left:30px;
+}
+.store-page .container .inner-content .stores-data ul.stores-dates-title{
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 1px solid #b3b1b1;
+    border-bottom: 1px solid #b3b1b1;
+    margin-bottom: 25px;
+
+}
+.store-page .container .inner-content .stores-data ul.stores-dates-title li{
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex: none !important;
+}
+.store-page .container .inner-content .stores-data ul.tour-dates{
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+.store-page .container .inner-content .stores-data ul.tour-dates ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.store-page .container .inner-content .stores-data ul.tour-dates ul li{
+    font-size: 17px !important;
+    margin-bottom: 10px;
+    cursor: default;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.store-page .container .inner-content .stores-data ul.tour-dates ul li a{
+    color: #fff;
+    text-decoration: underline;
+}
+.store-page .container .inner-content .stores-data ul.tour-dates ul li a:hover{
+    text-decoration: underline;
+}
+
+.store-page .container .inner-content .stores-data ul li{
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    background: transparent;
+}
+
+.store-page .container .inner-content .stores-data ul.stores-dates-title li:hover{
+    text-decoration: underline;
+}
+
+.store-page .container .inner-content .stores-data ul.stores-dates-title li.active{
+    text-decoration: underline;
+    background: transparent;
+}
+.store-page .container .inner-content .stores-data .product-store{
+    padding: 0 35px;
+    margin-bottom: 200px;
+}
+.store-page .container .inner-content .stores-data .product-store .item img{
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+}
+
+
+.store-page .container .inner-content .stores-data .product-store .item img:hover{
+    transform: scale(1.1);
+}
+
+.store-page .container .inner-content .stores-data .product-store .item{
+    position: relative;
+}
+
+
+.store-page .container .inner-content .stores-data .product-store .item img.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-bottom: 8px solid transparent;
+
+}
+
+.store-page .container .inner-content .stores-data .product-store .item .add-to-card {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.store-page .container .inner-content .stores-data .product-store .item:hover .image {
+  opacity: 0.8;
+  border-bottom: 8px solid red;
+}
+
+.store-page .container .inner-content .stores-data .product-store .item:hover .add-to-card {
+  opacity: 1;
+}
+
+.store-page .container .inner-content .stores-data .product-store .item .add-to-card .add-btn button{
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 32px;
+    color: red;
+    padding: 0px 16px;
+    font-size: 40px;
+}
+
+.shop-now{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.AddCart{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.media-page .container .inner-content .photos .photos-album .photo-item{
-    flex: 1;
-    margin-right:30px; 
-}
-.media-page .container .inner-content .photos .photos-album .photo-item.last-image{
-    margin-right:0px; 
-}
-.media-page .container .inner-content .photos .photos-album .photo-item img{
+.AddCart .image{
+    flex:1;
     width: 100%;
+    height: 100%;
 }
-.media-page .container .inner-content .videos .video-album{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.AddCart .content{
+    flex: 1;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.AddCart .content .title{
+    font-size: 30px;
+}
+.AddCart .content .price{
+font-size: 25px;
+}
+.AddCart .content .size{
+    font-size: 22px;
+    word-spacing: 20px;
+    cursor: pointer;
+}
+.AddCart .content .addBtn{
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 32px;
+    color: red;
+    padding: 5px 15px;
+    font-size: 30px;
+    width: -moz-fit-content;
+    cursor: pointer;
 }
 
-.media-page .container .inner-content .videos .video-album .video-item{
-    flex: 1;
-    margin-right:30px; 
+.pt-25{
+    padding-top: 25px;
 }
-.media-page .container .inner-content .videos .video-album .video-item.last-video{
-    margin-right:0px; 
+
+.goBack:hover
+{
+color: green;
 }
-.media-page .container .inner-content .videos .video-album .video-item img{
-    width: 100%;
+.flxProp{
+    flex:2 !important;
 }
